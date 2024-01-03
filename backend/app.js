@@ -65,7 +65,7 @@ app.use((error, req, res, next) => {
 
 const PORT = 5000;
 mongoose
-  .connect('mongodb+srv://atharvp18:atharvp1801@cluster0.2pcnjfv.mongodb.net/?retryWrites=true&w=majority',{ useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
+  .connect('mongodb+srv://<username>:<password>@cluster0.2pcnjfv.mongodb.net/?retryWrites=true&w=majority',{ useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
   .then(() => {
     console.log(`Connected to Database`);
   })
@@ -76,15 +76,3 @@ mongoose
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
 });
-
-// mongoose
-//   .connect(
-//     "mongodb+srv://atharvp18:atharvp1801@cluster0.2pcnjfv.mongodb.net/?retryWrites=true&w=majority",
-//     { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }
-//   )
-//   .then(() => {
-//     app.listen(PORT);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
